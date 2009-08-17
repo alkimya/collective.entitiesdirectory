@@ -22,6 +22,7 @@ Contributors
 
   * Manuel Gualda Caballero (Fundación Utopía Verde).
   * Israel Saeta Pérez (UCM)
+  * Lôc Cosnier (La Pata de Oca)
   
 Missing bits to add later!
 
