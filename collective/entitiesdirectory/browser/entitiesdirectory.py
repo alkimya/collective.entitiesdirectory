@@ -3,7 +3,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
 
 class EntitiesDirectoryView(BrowserView):
-    template = ViewPageTemplateFile("entitiesdirectory_view.pt")
+    template = ViewPageTemplateFile("templates/entitiesdirectory_view.pt")
 
     __call__ = template
 

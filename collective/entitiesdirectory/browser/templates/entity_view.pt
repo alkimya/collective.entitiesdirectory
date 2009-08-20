@@ -13,7 +13,7 @@
         
                 <div tal:replace="structure provider:plone.abovecontenttitle" />
 
-        <h1 tal:content="context/Title" >Title</h1>
+        <h1 tal:content="context/Title" >Name of the Entity</h1>
 
         <div tal:replace="structure provider:plone.belowcontenttitle" />
         
@@ -52,7 +52,7 @@
         
         <p>
         <metal:field use-macro="python:context.widget('text', mode='view')">
-        Text
+        Description
         </metal:field>
         </p>
         

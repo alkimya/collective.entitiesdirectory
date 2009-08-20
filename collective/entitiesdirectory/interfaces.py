@@ -1,7 +1,10 @@
 from zope.interface import Interface
+from zope.schema import Iterable
+
+from collective.entitiesdirectory.i18n import _
 
 class IEntity(Interface):
-    """An entry in a entities directory. Can be a ONG, a students' group or whatever
+    """An entry in a entities directory. Can be a NGO, a students' group or whatever
     """
 
 class IEntitiesDirectory(Interface):
