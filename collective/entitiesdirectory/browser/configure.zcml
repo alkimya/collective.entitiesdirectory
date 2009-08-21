@@ -8,7 +8,7 @@
 
 <page for="collective.entitiesdirectory.interfaces.IEntity"
     name="entity_view"
-    template="entity_view.pt"
+    template="templates/entity_view.pt"
     permission="zope2.View"
     />
 
