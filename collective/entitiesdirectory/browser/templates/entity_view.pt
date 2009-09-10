@@ -1,5 +1,10 @@
 <html metal:use-macro="here/main_template/macros/master"
       i18n:domain="plone" >
+      
+<tal:js metal:fill-slot="javascript_head_slot">
+    <script type="text/javascript" src="country-states.js"></script>
+</tal:js>
+
 <body>
 
 <div metal:fill-slot="main" >
@@ -88,11 +93,11 @@
         <p><strong>Localidad:</strong> 
         <span tal:content="structure here/getCity" />
         
-        <p><strong>Provincia:</strong> 
-        <span tal:content="structure here/getProvince" />
-        
         <p><strong>País:</strong>
         <span tal:content="structure here/getCountry" />
+
+        <p><strong>Provincia:</strong> 
+        <span tal:content="structure here/getProvince" />
         
         <p><strong>Ámbito Territorial:</strong>
         <span tal:content="structure here/getTerritorialScope" />
