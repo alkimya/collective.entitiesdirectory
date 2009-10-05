@@ -11,5 +11,5 @@
     template="templates/entity_view.pt"
     permission="zope2.View"
     />
-
+    
 </configure>

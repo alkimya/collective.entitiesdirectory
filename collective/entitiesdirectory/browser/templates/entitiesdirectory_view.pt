@@ -12,12 +12,12 @@
         <h1 tal:content="context/Title" >Title</h1>
 
         <form action=".">
-            <label for="searchText">Texto de búsqueda</label>
+            <label for="searchText">Search Entities</label>
             <input name="searchText"
                    type="text"
                    tal:attributes="value request/form/searchText | nothing" />
 
-            <input type="submit" name="search" value="buscar" />
+            <input type="submit" name="search" value="find" />
         </form>
 
         <ul>

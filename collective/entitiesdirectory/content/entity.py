@@ -9,7 +9,6 @@ from Products.Archetypes import atapi
 from collective.entitiesdirectory.config import PROJECTNAME
 from collective.entitiesdirectory.interfaces import IEntity
 
-
 # Schema definition
 EntitySchema = atapi.BaseSchema.copy() +  atapi.Schema((
 
@@ -54,14 +53,17 @@ EntitySchema = atapi.BaseSchema.copy() +  atapi.Schema((
     atapi.StringField('phone',
               maxlength = 20,
               size = 20,
+              validators = ('isInternationalPhoneNumber',),
               ),
     atapi.StringField('mobile',
               maxlength = 20,
               size = 20,
+              validators = ('isInternationalPhoneNumber',),
               ),
     atapi.StringField('fax',
               maxlength = 20,
               size = 20,
+              validators = ('isInternationalPhoneNumber',),
               ),
     atapi.StringField('address',
               required = True,
@@ -69,6 +71,7 @@ EntitySchema = atapi.BaseSchema.copy() +  atapi.Schema((
     atapi.StringField('zip',
               maxlength = 9,
               size = 9,
+              validators = ('isZipCode',),
               ),
     atapi.StringField('city',
               searchable = 1,
@@ -77,6 +80,8 @@ EntitySchema = atapi.BaseSchema.copy() +  atapi.Schema((
     atapi.StringField('country',
               searchable = 1,
               required = 1,
+              widget = atapi.SelectionWidget(format = 'flex'),
+              vocabulary_factory = "countries"
               ),
     atapi.StringField('province',
               searchable = 1,
