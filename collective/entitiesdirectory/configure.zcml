@@ -7,6 +7,11 @@
 
 <include package=".browser" />
 
+<utility
+        provides="zope.schema.interfaces.IVocabularyFactory"
+        component=".vocabularies.getCountries"
+        name="countries" />
+
 <genericsetup:registerProfile
        name="EntitiesDirectory"
        title="EntitiesDirectory"
